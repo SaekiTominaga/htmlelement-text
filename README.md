@@ -12,15 +12,13 @@ If the page is tries to close with the contents of the form control changed, a c
 
 ```
 <script type="module">
-import FormBeforeUnloadConfirm from './dist/FormBeforeUnloadConfirm.esm.js';
+import HtmlElementText from './dist/HtmlElementText.esm.js';
 
-for (const formElement of document.querySelectorAll('.js-form-beforeunload-confirm')) {
-  new FormBeforeUnloadConfirm(formElement);
+for (const textElement of document.querySelectorAll('.js-text-width')) {
+  const htmlElementText = new HtmlElementText(textElement);
+  console.debug(`${htmlElementText.getWidth()}px`);
 }
 </script>
 
-<form class="js-form-beforeunload-confirm">
-  <p><input /></p>
-  <p><button>Submit</button></p>
-</form>
+<span class="js-text-width">Hello world!</span>
 ```
