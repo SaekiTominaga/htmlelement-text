@@ -1,7 +1,7 @@
 /**
  * HTMLElement text
  *
- * @version 1.1.0
+ * @version 1.1.1
  */
 export default class {
 	#thisElement: HTMLElement; // 対象要素
@@ -20,7 +20,7 @@ export default class {
 	 *
 	 * @returns {number} Text width in CSS pixels
 	 */
-	getWidth(text: string = <string>this.#thisElement.textContent): number {
+	getWidth(text = <string>this.#thisElement.textContent): number {
 		const context = <CanvasRenderingContext2D>document.createElement('canvas').getContext('2d');
 		context.beginPath();
 
