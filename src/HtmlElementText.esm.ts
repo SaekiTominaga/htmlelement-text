@@ -1,7 +1,7 @@
 /**
  * HTMLElement text
  *
- * @version 1.0.0
+ * @version 1.1.0
  */
 export default class {
 	#thisElement: HTMLElement; // 対象要素
@@ -16,9 +16,11 @@ export default class {
 	/**
 	 * Get the text width (the width of that inline box)
 	 *
+	 * @param {string} text - Text to calculate width (If not specified, HTMLElement.textContent)
+	 *
 	 * @returns {number} Text width in CSS pixels
 	 */
-	getWidth(): number {
+	getWidth(text: string = <string>this.#thisElement.textContent): number {
 		const context = <CanvasRenderingContext2D>document.createElement('canvas').getContext('2d');
 		context.beginPath();
 
@@ -33,6 +35,6 @@ export default class {
 			context.font = `${styleDeclaration.fontStyle} ${styleDeclaration.fontVariant} ${styleDeclaration.fontWeight} ${styleDeclaration.fontSize} ${styleDeclaration.fontFamily}`;
 		}
 
-		return context.measureText(<string>this.#thisElement.textContent).width;
+		return context.measureText(text).width;
 	}
 }

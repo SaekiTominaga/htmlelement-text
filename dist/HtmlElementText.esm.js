@@ -15,7 +15,7 @@ var _thisElement;
 /**
  * HTMLElement text
  *
- * @version 1.0.0
+ * @version 1.1.0
  */
 export default class {
     /**
@@ -28,9 +28,11 @@ export default class {
     /**
      * Get the text width (the width of that inline box)
      *
+     * @param {string} text - Text to calculate width (If not specified, HTMLElement.textContent)
+     *
      * @returns {number} Text width in CSS pixels
      */
-    getWidth() {
+    getWidth(text = __classPrivateFieldGet(this, _thisElement).textContent) {
         const context = document.createElement('canvas').getContext('2d');
         context.beginPath();
         if (document.documentElement.computedStyleMap !== undefined) {
@@ -42,7 +44,7 @@ export default class {
             const styleDeclaration = getComputedStyle(__classPrivateFieldGet(this, _thisElement), '');
             context.font = `${styleDeclaration.fontStyle} ${styleDeclaration.fontVariant} ${styleDeclaration.fontWeight} ${styleDeclaration.fontSize} ${styleDeclaration.fontFamily}`;
         }
-        return context.measureText(__classPrivateFieldGet(this, _thisElement).textContent).width;
+        return context.measureText(text).width;
     }
 }
 _thisElement = new WeakMap();

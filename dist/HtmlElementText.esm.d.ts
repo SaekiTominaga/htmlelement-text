@@ -1,7 +1,7 @@
 /**
  * HTMLElement text
  *
- * @version 1.0.0
+ * @version 1.1.0
  */
 export default class {
     #private;
@@ -12,8 +12,10 @@ export default class {
     /**
      * Get the text width (the width of that inline box)
      *
+     * @param {string} text - Text to calculate width (If not specified, HTMLElement.textContent)
+     *
      * @returns {number} Text width in CSS pixels
      */
-    getWidth(): number;
+    getWidth(text?: string): number;
 }
 //# sourceMappingURL=HtmlElementText.esm.d.ts.map
