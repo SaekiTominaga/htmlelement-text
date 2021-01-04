@@ -22,3 +22,24 @@ for (const textElement of document.querySelectorAll('.js-text-width')) {
 
 <span class="js-text-width">Hello world!</span>
 ```
+
+## Constructor
+
+```
+new HtmlElementText(
+  thisElement: HTMLElement
+)
+```
+
+### Parameters
+
+<dl>
+<dt>thisElement [required]</dt>
+<dd>Target element</dd>
+</dl>
+
+## Methods
+
+| Name | Returns | Description |
+|-|-|-|
+| getWidth(text: string = this.#thisElement.textContent) | {number} Text width in CSS pixels | Get the text width (the width of that inline box) |
