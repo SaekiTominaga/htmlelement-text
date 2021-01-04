@@ -1,8 +1,8 @@
-# Show confirmation dialog message when page is tries to close while filling out a form.
+# Get the text width (width of the inline box) of the HTMLElement.
 
 [![npm version](https://badge.fury.io/js/%40saekitominaga%2Fhtmlelement-text.svg)](https://badge.fury.io/js/%40saekitominaga%2Fhtmlelement-text)
 
-If the page is tries to close with the contents of the form control changed, a confirm dialog is displayed to prevent the changes from being discarded.
+Get the text width (width of the inline box) of the HTMLElement.
 
 ## Demo
 
