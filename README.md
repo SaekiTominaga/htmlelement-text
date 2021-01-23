@@ -10,7 +10,7 @@ Get the text width (width of the inline box) of the HTMLElement.
 
 ## Examples
 
-```
+```HTML
 <script type="module">
 import HtmlElementText from './dist/HtmlElementText.esm.js';
 
@@ -25,7 +25,7 @@ for (const textElement of document.querySelectorAll('.js-text-width')) {
 
 ## Constructor
 
-```
+```TypeScript
 new HtmlElementText(
   thisElement: HTMLElement
 )
