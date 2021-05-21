@@ -1,7 +1,5 @@
 /**
  * HTMLElement text
- *
- * @version 1.1.1
  */
 export default class {
 	#thisElement: HTMLElement; // 対象要素

@@ -14,8 +14,6 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
 var _thisElement;
 /**
  * HTMLElement text
- *
- * @version 1.1.1
  */
 export default class {
     /**
