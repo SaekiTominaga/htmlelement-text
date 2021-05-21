@@ -34,12 +34,13 @@ new HtmlElementText(
 ### Parameters
 
 <dl>
-<dt>thisElement [required]</dt>
+<dt><code>thisElement</code> [required]</dt>
 <dd>Target element</dd>
 </dl>
 
 ## Methods
 
-| Name | Returns | Description |
-|-|-|-|
-| getWidth(text: string = this.#thisElement.textContent) | {number} Text width in CSS pixels | Get the text width (the width of that inline box) |
+<dl>
+<dt><code>getWidth(text = &lt;string&gt;this.#thisElement.textContent): number</code></dt>
+<dd>Get the text width (the width of that inline box)</dd>
+</dl>
